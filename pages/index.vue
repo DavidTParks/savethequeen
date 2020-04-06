@@ -25,7 +25,8 @@ export default {
     ProductCard
   },
   async fetch({ store, params }) {
-    await store.dispatch('candles/fetchAllProducts')
+    await store.dispatch('candles/fetchAllProducts');
+    await store.dispatch('candles/createCheckout');
   },
   computed: {
     products() {

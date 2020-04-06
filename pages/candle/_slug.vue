@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        {{checkout}}
     </div>
 </template>
 
@@ -16,7 +16,13 @@ export default {
         },
         currentCandle() {
             return this.$store.state.candles.currentCandle;
-        }
+        },
+        checkout() {
+            return this.$store.state.candles.checkout;
+        },
+        cart() {
+            return this.$store.state.candles.cart;
+        },
     },
 }
 </script>
