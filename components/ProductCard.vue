@@ -10,7 +10,7 @@
             <h3 class="">{{product.title}}</h3>
         </div>
         <div class="flex items-center justify-center">
-            <button @click="addItemToCart" class="w-48 flex items-center justify-center px-4 py-1 border border-transparent text-xs leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-gray-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out">
+            <button @click="addItemToCart" class="w-48 flex items-center justify-center px-4 py-1 border border-transparent text-xs leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out">
                 Add To Cart
             </button>
         </div>
