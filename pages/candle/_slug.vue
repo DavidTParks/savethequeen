@@ -6,6 +6,7 @@
 
 <script>
 export default {
+    layout: 'detail',
     async fetch({ store, params }) {
         await store.dispatch('candles/getCandleByID', params.slug)
     },

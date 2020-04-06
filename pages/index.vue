@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="min-h-screen">
   <Hero></Hero>
   <div class="container max-w-5xl mx-auto mt-12 px-4">
     <h2 class="text-4xl tracking-tight leading-10 font-bold text-gray-900 sm:text-5xl sm:leading-none md:text-4xl text-center">
