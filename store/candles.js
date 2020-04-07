@@ -30,6 +30,7 @@ export const mutations = {
         })
     },
     SET_CHECKOUT(state, payload) {
+        
         state.checkout = Object.assign(payload);
         state.checkoutID = payload.id;
     }
@@ -49,7 +50,6 @@ export const actions = {
 
     async removeItemFromCart({ commit, state }, buyInfo) {
         const lineItemToRemove = state.checkout.lineItems.find(lineItem => lineItem.variant.id === buyInfo.lineItemID);
-        console.log(lineItemToRemove);
         const lineItemIdsToRemove = [lineItemToRemove.id];
         this.$shopify.checkout.removeLineItems(buyInfo.checkoutID, lineItemIdsToRemove).then(checkout => {
             console.log(checkout.lineItems)
