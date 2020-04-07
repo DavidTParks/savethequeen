@@ -2,7 +2,8 @@
 <div class="min-h-screen">
   <Hero></Hero>
   <div class="container max-w-5xl mx-auto mt-12 px-4">
-    <h2 class="text-4xl tracking-tight leading-10 font-bold text-gray-900 sm:text-5xl sm:leading-none md:text-4xl text-center">
+    <MarketingSection/>
+    <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mt-12 lg:text-center">
       Featured Products
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
@@ -17,11 +18,13 @@
 <script>
 import NavBar from '~/components/NavBar.vue'
 import Hero from '~/components/Hero.vue'
+import MarketingSection from '~/components/MarketingSection'
 import ProductCard from '~/components/ProductCard.vue'
 export default {
   components: {
     NavBar,
     Hero,
+    MarketingSection,
     ProductCard
   },
   async fetch({ store, params }) {
