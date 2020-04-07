@@ -25,12 +25,15 @@ export default {
     ProductCard
   },
   async fetch({ store, params }) {
-    await store.dispatch('candles/fetchAllProducts');
     await store.dispatch('candles/createCheckout');
+    await store.dispatch('candles/fetchAllProducts');
   },
   computed: {
     products() {
       return this.$store.state.candles.products;
+    },
+    checkout() {
+      return this.$store.state.candles.checkout;
     }
   },
 }

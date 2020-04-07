@@ -1,6 +1,6 @@
 <template>
-    <div>
-        {{checkout}}
+    <div class="min-h-screen">
+        {{currentCandle.description}}
     </div>
 </template>
 
