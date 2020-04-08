@@ -63,7 +63,7 @@ export default {
 		unoptimized: false
 	},
 	sitemap: {
-		hostname: 'https://https://savethequeencandleco.com/',
+		hostname: 'https://savethequeencandleco.com/',
     gzip: true,
     exclude: [
       '/cart',
