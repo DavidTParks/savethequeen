@@ -39,6 +39,7 @@ export default {
 		'@nuxtjs/axios',
 		'@nuxtjs/pwa',
 		'nuxt-shopify',
+		'@nuxtjs/sitemap',
 		// Doc: https://github.com/nuxt-community/dotenv-module
 		'@nuxtjs/dotenv'
 	],
@@ -60,6 +61,11 @@ export default {
      * This should only be used when you need to add custom queries to supplement the JS Buy SDK queries.
      */
 		unoptimized: false
+	},
+	sitemap: {
+		hostname: 'https://https://savethequeencandleco.com/',
+		gzip: true,
+		routes: [ '/', '/candles' ]
 	},
 	/*
   ** Axios module configuration
