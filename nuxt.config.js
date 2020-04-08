@@ -1,3 +1,4 @@
+require('dotenv').config();
 export default {
 	mode: 'universal',
 	/*
@@ -53,7 +54,7 @@ export default {
 		/**
      * Your shopify storefront access token
      */
-		storefrontAccessToken: 'd09939972403684d89b1d580719c9ae4',
+    storefrontAccessToken: process.env.SHOPIFY_TOKEN,
 
 		/**
      * This will be larger than the optimized version, as it will contain all fields that are available in the
