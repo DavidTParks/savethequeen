@@ -68,7 +68,6 @@ export default {
     exclude: [
       '/cart',
     ],
-		routes: [ '/', '/candles' ]
 	},
 	/*
   ** Axios module configuration
