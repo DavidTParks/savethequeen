@@ -64,7 +64,10 @@ export default {
 	},
 	sitemap: {
 		hostname: 'https://https://savethequeencandleco.com/',
-		gzip: true,
+    gzip: true,
+    exclude: [
+      '/cart',
+    ],
 		routes: [ '/', '/candles' ]
 	},
 	/*
