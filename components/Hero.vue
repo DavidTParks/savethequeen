@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="hidden md:block md:ml-10 md:pr-4">
-            <a href="#" class="font-medium text-gray-900 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Candles</a>
+            <nuxt-link to="/candles" class="font-medium text-gray-900 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Candles</nuxt-link>
             <a href="#" class="ml-8 font-medium text-gray-900 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Custom Pours</a>
             <nuxt-link class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out relative" to="/cart">
                 <svg class="inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@
               </div>
             </div>
             <div class="px-2 pt-2 pb-3">
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Candles</a>
+              <nuxt-link to="/candles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Candles</nuxt-link>
               <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Custom Pours</a>
               <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">About Us</a>
             </div>
@@ -78,9 +78,9 @@
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+              <nuxt-link to="/candles" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                 See Products
-              </a>
+              </nuxt-link>
             </div>
             <div class="mt-3 sm:mt-0 sm:ml-3">
               <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-700 bg-gray-200 hover:text-gray-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">

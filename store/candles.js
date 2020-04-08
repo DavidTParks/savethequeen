@@ -1,6 +1,7 @@
 
 export const state = () => ({
     products: [],
+    collections: [],
     currentCandle: {},
     checkout: {},
     checkoutID: '',
@@ -10,13 +11,16 @@ export const state = () => ({
 
 export const getters = {
     checkoutID(state) {
-        return state.checkoutID;
+        return state.checkout.id;
     },
 }
 
 export const mutations = {
     SET_PRODUCTS(state, payload) {
         state.products = payload;
+    },
+    SET_COLLECTIONS(state, payload) {
+        state.collections = payload;
     },
     SET_CURRENT_CANDLE(state, payload) {
         state.currentCandle = Object.assign(payload);
@@ -30,7 +34,6 @@ export const mutations = {
         })
     },
     SET_CHECKOUT(state, payload) {
-        
         state.checkout = Object.assign(payload);
         state.checkoutID = payload.id;
     }
@@ -40,6 +43,8 @@ export const mutations = {
 export const actions = {
     async fetchAllProducts({ commit }) {
         const products = await this.$shopify.product.fetchAll();
+        const collections = await this.$shopify.collection.fetchAllWithProducts();
+        commit("SET_COLLECTIONS", collections);
         commit('SET_PRODUCTS', products)
     },
     
