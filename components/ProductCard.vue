@@ -12,6 +12,9 @@
         <div class="flex items-center justify-center">
             <button v-if="cart.indexOf(product.variants[0].id) === -1" @click="addItemToCart" class="w-48 flex items-center justify-center px-4 py-1 border border-transparent text-xs leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out">
                 Add To Cart
+                <template v-if="cartItemsLoading.length > 0 && cartItemsLoading.indexOf(product.variants[0].id) !== -1">
+                    <svg class="h-2 w-2 rotate ml-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path></svg>
+                </template>
             </button>
             <button v-else @click="removeItemFromCart" class="w-48 flex items-center justify-center px-4 py-1 border border-transparent text-xs leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out">
                 Remove From Cart
@@ -38,6 +41,9 @@ export default {
     computed: {
         checkout() {
             return this.$store.state.candles.checkoutID;
+        },
+        cartItemsLoading() {
+            return this.$store.state.candles.cartItemsLoading;
         },
         cart() {
             return this.$store.state.candles.cart;
