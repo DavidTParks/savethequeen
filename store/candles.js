@@ -6,7 +6,8 @@ export const state = () => ({
     checkout: {},
     checkoutID: '',
     checkoutURL: '',
-    cart: []
+    cart: [],
+    cartItemsLoading: []
 })
 
 export const getters = {
@@ -36,6 +37,14 @@ export const mutations = {
     SET_CHECKOUT(state, payload) {
         state.checkout = Object.assign(payload);
         state.checkoutID = payload.id;
+    },
+    ADD_CART_ITEM_LOADING(state, payload) {
+        state.cartItemsLoading.push(payload);
+    },
+    REMOVE_CART_ITEM_LOADING(state, payload) {
+        state.cartItemsLoading = state.cartItemsLoading.filter(cartItem => {
+            return payload !== cartItem;
+        })
     }
 }
 
@@ -73,12 +82,14 @@ export const actions = {
                 quantity: 1,
             },
         ];
+        commit('ADD_CART_ITEM_LOADING', buyInfo.lineItemID);
         if(state.checkoutID === "") {
             this.$shopify.checkout.create().then(checkout => {
         // Do something with the checkout
                 this.$shopify.checkout.addLineItems(checkout.id, lineItemsToAdd).then(checkout => {
                 // Do something with the updated checkout
                     commit('ADD_TO_CART', buyInfo.lineItemID);
+                    commit('REMOVE_CART_ITEM_LOADING', buyInfo.lineItemID);
                     commit('SET_CHECKOUT', checkout);
                 });
             });
@@ -86,6 +97,7 @@ export const actions = {
             // Add an item to the checkout
             this.$shopify.checkout.addLineItems(buyInfo.checkoutID, lineItemsToAdd).then(checkout => {
                 commit('SET_CHECKOUT', checkout);
+                commit('REMOVE_CART_ITEM_LOADING', buyInfo.lineItemID);
                 commit('ADD_TO_CART', buyInfo.lineItemID)
             });
         }
