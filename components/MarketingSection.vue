@@ -102,7 +102,7 @@
                 <h5 class="text-lg leading-6 font-medium text-gray-900">Giving Back</h5>
                 <p
                   class="mt-2 text-base leading-6 text-gray-500"
-                >A percentage of our profits is donated to the <a class="underline text-gray-700" href="https://thehoneybeeconservancy.org/">Honeybee Conservancy</a>, which is committed to reintroducing honeybees to urban areas in the United States.</p>
+                >A percentage of our profits is donated to the <a target="_blank" class="underline text-gray-700" href="https://thehoneybeeconservancy.org/">Honeybee Conservancy</a>, which is committed to reintroducing honeybees to urban areas in the United States.</p>
               </div>
             </div>
           </li>

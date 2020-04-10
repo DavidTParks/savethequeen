@@ -20,11 +20,11 @@
           </template>
           <template v-else-if="$fetchState.error">
             <p>
-              Error while fetching candles: {{ error }}
+              Error while fetching posts: {{ error }}
             </p>
           </template>
            <template v-else>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <template v-for="candle in products">
                   <ProductCard :key="candle.id" :product="candle"></ProductCard>
               </template>
@@ -50,13 +50,11 @@ export default {
   },
   data() {
     return {
-      products: [],
-      collections: [],
+      products: []
     }
   },
   async fetch() {
     this.products = await this.$shopify.product.fetchAll();
-    this.collections = await this.$shopify.collection.fetchAllWithProducts();
   },
   layout: 'detail',
   computed: {
