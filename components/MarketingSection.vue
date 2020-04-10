@@ -5,10 +5,7 @@
         <p class="text-base leading-6 text-yellow-600 font-semibold tracking-wide uppercase">Candles</p>
         <h3
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-        >Our candles are completely natural</h3>
-        <p
-          class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto"
-        >Our long lasting candles are custom poured into colletible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.</p>
+        >What Sets Us Apart</h3>
       </div>
 
       <div class="mt-10">
@@ -38,10 +35,10 @@
                 </div>
               </div>
               <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">No artificial fragrances</h5>
+                <h5 class="text-lg leading-6 font-medium text-gray-900">Unique Vintage Glassware</h5>
                 <p
                   class="mt-2 text-base leading-6 text-gray-500"
-                >Our candles use no artificial fragrances. They are perfect for people with fragrance sensetivity.</p>
+                >Our glassware has been carefully curated from our 30+ years in the anique business. From mid-century modern to Grandma's wine glasses. We look forward to sharing our treasuures with you and helping you create some of your own.</p>
               </div>
             </div>
           </li>
@@ -70,10 +67,10 @@
                 </div>
               </div>
               <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">One of a kind</h5>
+                <h5 class="text-lg leading-6 font-medium text-gray-900">Our Beeswax Blend</h5>
                 <p
                   class="mt-2 text-base leading-6 text-gray-500"
-                >Every piece if glassware is hand picked and completely unique. No two candles are the same.</p>
+                >Like air purifiers, beeswax candles release negative ions that neutralize particles from air pollutants. Beeswax candles are long-burning and emit the same light spectrum as the sun, giving them a comforting ambiance.</p>
               </div>
             </div>
           </li>
@@ -102,10 +99,10 @@
                 </div>
               </div>
               <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">Collectible</h5>
+                <h5 class="text-lg leading-6 font-medium text-gray-900">Giving Back</h5>
                 <p
                   class="mt-2 text-base leading-6 text-gray-500"
-                >Once you are done with the candle, the vintage glass will make a great collectible item. Either repour it or use it for something else!</p>
+                >A percentage of our profits is donated to the <a class="underline text-gray-700" href="https://thehoneybeeconservancy.org/">Honeybee Conservancy</a>, which is committed to reintroducing honeybees to urban areas in the United States.</p>
               </div>
             </div>
           </li>
@@ -136,10 +133,10 @@
               <div class="ml-4">
                 <h5
                   class="text-lg leading-6 font-medium text-gray-900"
-                >All natural Wisconsin beeswax</h5>
+                >Nonallergenic</h5>
                 <p
                   class="mt-2 text-base leading-6 text-gray-500"
-                >As a Wisconsin company, we source our beeswax from Wisconsin bee keepers and support our local economy while staying completely natural.</p>
+                >Our candles do not contain fragarance, a petrochemical byprouct (oil sludge) which causes allergic reactions in many people. Natural beeswax produces a mild honey, nectar aroma.</p>
               </div>
             </div>
           </li>
