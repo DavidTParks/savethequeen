@@ -65,9 +65,10 @@ export const actions = {
     async removeItemFromCart({ commit, state }, buyInfo) {
         const lineItemToRemove = state.checkout.lineItems.find(lineItem => lineItem.variant.id === buyInfo.lineItemID);
         const lineItemIdsToRemove = [lineItemToRemove.id];
+        commit('ADD_CART_ITEM_LOADING', buyInfo.lineItemID);
         this.$shopify.checkout.removeLineItems(buyInfo.checkoutID, lineItemIdsToRemove).then(checkout => {
-            console.log(checkout.lineItems)
             commit('SET_CHECKOUT', checkout);
+            commit('REMOVE_CART_ITEM_LOADING', buyInfo.lineItemID);
             commit('REMOVE_FROM_CART', buyInfo.lineItemID);
         });
         

@@ -10,6 +10,7 @@
         <template v-for="product in products">
           <ProductCard :key="product.id" :product="product"></ProductCard>
         </template>
+
       </div>
     </div>
   </div>
