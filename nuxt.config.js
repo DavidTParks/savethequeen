@@ -36,9 +36,6 @@ export default {
   ** Nuxt.js modules
   */
 	modules: [
-		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios',
-		'@nuxtjs/pwa',
 		'nuxt-shopify',
 		'@nuxtjs/sitemap',
 		// Doc: https://github.com/nuxt-community/dotenv-module

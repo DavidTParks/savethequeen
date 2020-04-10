@@ -93,4 +93,11 @@ export default {
 .column-style {
     @apply text-base leading-6 font-medium text-gray-700;
 }
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
 </style>
