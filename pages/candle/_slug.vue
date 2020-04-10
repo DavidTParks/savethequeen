@@ -1,19 +1,21 @@
 <template>
   <div class="min-h-screen">
     <div class="py-12 bg-white">
-        <template v-if="$fetchState.pending">
-            <content-placeholders  :rounded="true">
-                <content-placeholders-img />
-            </content-placeholders>
-        </template>
-        <template v-else-if="$fetchState.error">
-        <p>
-            Error while fetching posts: {{ error }}
-        </p>
-        </template>
-        <template v-else>
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">{{candle.description}}</div>
-        </template>
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <template v-if="$fetchState.pending">
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                </content-placeholders>
+            </template>
+            <template v-else-if="$fetchState.error">
+            <p>
+                Error while fetching posts: {{ error }}
+            </p>
+            </template>
+            <template v-else>
+                {{candle.description}}
+            </template>
+        </div>
     </div>
   </div>
 </template>
