@@ -2,10 +2,10 @@
     <div class="min-h-screen">
         <div class="container max-w-5xl mx-auto mt-32 px-4">
             <h1 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl text-center">Your Cart</h1>
-            <nuxt-link class=" flex justify-center mt-2 cursor-pointer w-full text-center underline" to="/" v-if="cart.length > 0">Continue shopping</nuxt-link>
+            <nuxt-link class=" flex justify-center mt-2 cursor-pointer w-full text-center underline" to="/candles" v-if="cart.length > 0">Continue shopping</nuxt-link>
             <div class="max-w-sm flex flex-col items-center justify-center mx-auto" v-if="cart.length === 0">
                 <h3 class="text-center text-2xl mt-4">Your cart is currently empty.</h3>
-                <nuxt-link to="/" href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 mt-12">
+                <nuxt-link to="/candles" href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 mt-12">
                 Continue Shopping
                 </nuxt-link>
             </div>
@@ -21,7 +21,7 @@
                 </thead>
                 <tbody class="mt-4 pt-4">
                     <template v-for="lineItem in checkout.lineItems">
-                        <tr class="border-t border-b">
+                        <tr class="border-t border-b" :key="lineItem.id">
                             <td class="pb-4 pt-4 inline-flex flex-shrink flex-col md:flex-row">
                                 <img class="h-24 w-24 object-cover" :src="lineItem.variant.image.src">
                                 <div class="inline-flex flex-col ml-0 md:ml-4">
