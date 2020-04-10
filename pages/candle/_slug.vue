@@ -1,7 +1,19 @@
 <template>
   <div class="min-h-screen">
     <div class="py-12 bg-white">
-      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">{{currentCandle.description}}</div>
+        <template v-if="$fetchState.pending">
+            <content-placeholders  :rounded="true">
+                <content-placeholders-img />
+            </content-placeholders>
+        </template>
+        <template v-else-if="$fetchState.error">
+        <p>
+            Error while fetching posts: {{ error }}
+        </p>
+        </template>
+        <template v-else>
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">{{candle.description}}</div>
+        </template>
     </div>
   </div>
 </template>
@@ -10,15 +22,20 @@
 <script>
 export default {
   layout: "detail",
-  async fetch({ store, params }) {
-    await store.dispatch("candles/getCandleByID", params.slug);
+  data() {
+      return {
+          candle: {}
+      }
   },
+  async fetch() {
+    this.candle = await this.$shopify.product.fetch(params.slug);
+  },
+//   async fetch({ store, params }) {
+//     await store.dispatch("candles/getCandleByID", params.slug);
+//   },
   computed: {
     products() {
       return this.$store.state.candles.products;
-    },
-    currentCandle() {
-      return this.$store.state.candles.currentCandle;
     },
     checkout() {
       return this.$store.state.candles.checkout;

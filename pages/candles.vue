@@ -20,7 +20,7 @@
           </template>
           <template v-else-if="$fetchState.error">
             <p>
-              Error while fetching posts: {{ error }}
+              Error while fetching candles: {{ error }}
             </p>
           </template>
            <template v-else>
