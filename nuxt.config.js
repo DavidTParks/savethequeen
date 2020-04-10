@@ -12,7 +12,12 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.' },
+      { hid: 'keywords', name: 'keywords', content: 'candles, candle, beeswax candle, vintage glassware, vintage, beeswax' },
+      { name: 'og:title', content: `Save The Queen Candle Company` },
+      { name: 'og:description', content: 'Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.' },
+      { name: 'og:url', content: `https://www.savethequeencandleco.com/` },
+      { name: 'og:type', content: 'website' },
 		],
 		link: [ { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' } ]
 	},

@@ -14,25 +14,25 @@
             </template>
             <template v-else>
                 <ul class="flex items-center py-4 mt-4">
-                    <li class="flex items-center mr-2">
+                    <li class="breadcrumb-style">
                         <nuxt-link class="mr-2" to="/">Home</nuxt-link>
                         <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 5L16 12L9 19" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </li>
-                    <li class="flex items-center mr-2">
+                    <li class="breadcrumb-style">
                         <nuxt-link class="mr-2" to="/candles">Candles</nuxt-link>
                         <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 5L16 12L9 19" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </li>
-                    <li class="flex items-center mr-2">
+                    <li class="breadcrumb-style">
                         {{candle.title}}
                     </li>
                 </ul>
                 <div class="flex flex-col pt-4 py-12 sm:flex-row">
                     <div class="w-full sm:w-1/2">
-                        <img class="h-144 w-full object-contain bg-gray-100" :src="candle.images[0].src">
+                        <img class="h-96 sm:h-144 w-full object-contain bg-gray-100" :src="candle.images[0].src">
                     </div>
                     <div class="w-full sm:w-1/2 px-4 sm:px-6 lg:px-8 mt-4 sm:mt-0">
                         <div class="flex items-center">
@@ -40,7 +40,7 @@
                             <div v-if="candle.availableForSale" class="bg-gray-200 text-gray-900 rounded-full py-2 px-4 ml-4 text-xs uppercase tracking-wider">In Stock</div>
                         </div>
                         <h1 class="mt-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-left">{{candle.title}}</h1>
-                        <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">{{candle.description}}</p>
+                        <p class="text-base text-gray-900 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0">{{candle.description}}</p>
                         <div class="flex items-center justify-center flex-col mt-12">
                             <button v-if="cart.indexOf(candle.variants[0].id) === -1" @click="addItemToCart" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                                 Add To Cart
@@ -94,9 +94,6 @@ export default {
             this.$store.dispatch('candles/removeItemFromCart', { 'lineItemID': this.candle.variants[0].id, "checkoutID" : this.checkout});
         }
     },
-//   async fetch({ store, params }) {
-//     await store.dispatch("candles/getCandleByID", params.slug);
-//   },
   computed: {
     checkout() {
         return this.$store.state.candles.checkoutID;
@@ -104,17 +101,6 @@ export default {
     cart() {
       return this.$store.state.candles.cart;
     },
-    crumbs () {
-        let crumbs = []
-        this.$route.matched.forEach((item) => {
-            if (breadcrumbs[item.name] || breadcrumbs[item.path]) {
-            item.breadcrumb = breadcrumbs[item.name] || breadcrumbs[item.path]
-            crumbs.push(item)
-            }
-        })
-
-        return crumbs
-    }
   }
 };
 </script>
@@ -125,5 +111,9 @@ export default {
 }
 .page-enter, .page-leave-to {
   opacity: 0;
+}
+
+.breadcrumb-style {
+    @apply flex items-center mr-2;
 }
 </style>
