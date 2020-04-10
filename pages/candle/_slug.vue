@@ -3,7 +3,7 @@
     <div class="bg-white">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <template v-if="$fetchState.pending">
-                <content-placeholders  :rounded="true">
+                <content-placeholders class="mt-4"  :rounded="true">
                     <content-placeholders-img />
                 </content-placeholders>
             </template>
@@ -30,11 +30,11 @@
                         {{candle.title}}
                     </li>
                 </ul>
-                <div class="flex pt-4 py-12">
-                    <div class="w-1/2">
+                <div class="flex flex-col pt-4 py-12 sm:flex-row">
+                    <div class="w-full sm:w-1/2">
                         <img class="h-144 w-full object-contain bg-gray-100" :src="candle.images[0].src">
                     </div>
-                    <div class="w-1/2 px-4 sm:px-6 lg:px-8">
+                    <div class="w-full sm:w-1/2 px-4 sm:px-6 lg:px-8 mt-4 sm:mt-0">
                         <div class="flex items-center">
                             <h3 class="mt-2 text-xl leading-8 font-extrabold tracking-tight text-gray-900 sm:leading-10 text-left">${{candle.variants[0].price}}</h3>
                             <div v-if="candle.availableForSale" class="bg-gray-200 text-gray-900 rounded-full py-2 px-4 ml-4 text-xs uppercase tracking-wider">In Stock</div>
