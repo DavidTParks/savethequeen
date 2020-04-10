@@ -1,4 +1,7 @@
 require('dotenv').config();
+const fetch = require('node-fetch');
+const shopify = require('shopify-buy');
+// import "isomorphic-fetch"
 export default {
 	mode: 'universal',
 	/*
@@ -31,7 +34,21 @@ export default {
 	buildModules: [
 		// Doc: https://github.com/nuxt-community/nuxt-tailwindcss
 		'@nuxtjs/tailwindcss'
-	],
+  ],
+  
+  generate: {
+    async routes() {
+      const client = shopify.buildClient({
+        domain: 'savethequeencandles.myshopify.com',
+        storefrontAccessToken: process.env.SHOPIFY_TOKEN
+      }, fetch);
+
+      const products = await client.product.fetchAll();
+      const routes = products.map(product => `/candle/${product.id}`)
+
+      return ['/'].concat(routes)
+    }
+  },
 	/*
   ** Nuxt.js modules
   */

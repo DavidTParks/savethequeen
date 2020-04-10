@@ -15,8 +15,11 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.6.0",
     "nuxt": "^2.12.2",
     "nuxt-shopify": "^1.8.1",
+    "shopify-buy": "^2.9.3",
     "vue-content-placeholders": "^0.2.1"
   },
   "devDependencies": {
