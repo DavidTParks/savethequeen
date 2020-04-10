@@ -28,7 +28,7 @@ export default {
       }
   },
   async fetch() {
-    this.candle = await this.$shopify.product.fetch(params.slug);
+    this.candle = await this.$shopify.product.fetch(this.$route.params.slug);
   },
 //   async fetch({ store, params }) {
 //     await store.dispatch("candles/getCandleByID", params.slug);
