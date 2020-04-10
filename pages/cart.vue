@@ -1,6 +1,6 @@
 <template>
-    <div class="min-h-screen">
-        <div class="container max-w-5xl mx-auto mt-32 px-4">
+    <div class="min-h-screen bg-gray-100">
+        <div class="container max-w-5xl mx-auto pt-32 px-4">
             <h1 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl text-center">Your Cart</h1>
             <nuxt-link class=" flex justify-center mt-2 cursor-pointer w-full text-center underline" to="/candles" v-if="cart.length > 0">Continue shopping</nuxt-link>
             <div class="max-w-sm flex flex-col items-center justify-center mx-auto" v-if="cart.length === 0">

@@ -1,6 +1,6 @@
 <template>
-<div class="min-h-screen">
-    <div class="py-8 bg-white">
+<div class="min-h-screen bg-gray-100">
+    <div class="py-8">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <template v-if="$fetchState.pending">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
