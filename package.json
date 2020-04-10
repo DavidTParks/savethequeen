@@ -11,12 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/http": "^0.3.8",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.0",
-    "nuxt": "^2.0.0",
-    "nuxt-shopify": "^1.8.1"
+    "nuxt": "latest",
+    "nuxt-shopify": "^1.8.1",
+    "vue-content-placeholders": "^0.2.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0"

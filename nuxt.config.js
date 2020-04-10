@@ -69,7 +69,10 @@ export default {
     exclude: [
       '/cart',
     ],
-	},
+  },
+  plugins: [
+    '@/plugins/vue-placeholders.js'
+  ],
 	/*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

@@ -2,11 +2,34 @@
 <div class="min-h-screen">
     <div class="py-12 bg-white">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <template v-if="$fetchState.pending">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
-            <template v-for="product in products">
-                <ProductCard :key="product.id" :product="product"></ProductCard>
-            </template>
+              <content-placeholders  :rounded="true">
+                <content-placeholders-img />
+                <content-placeholders-heading />
+              </content-placeholders>
+              <content-placeholders  :rounded="true">
+                <content-placeholders-img />
+                <content-placeholders-heading />
+              </content-placeholders>
+              <content-placeholders  :rounded="true">
+                <content-placeholders-img />
+                <content-placeholders-heading />
+              </content-placeholders>
             </div>
+          </template>
+          <template v-else-if="$fetchState.error">
+            <p>
+              Error while fetching posts: {{ error }}
+            </p>
+          </template>
+           <template v-else>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+              <template v-for="candle in products">
+                  <ProductCard :key="candle.id" :product="candle"></ProductCard>
+              </template>
+              </div>
+            </template>
         </div>
     </div>
   </div>
@@ -25,14 +48,22 @@ export default {
     MarketingSection,
     ProductCard
   },
-  layout: 'detail',
-  async fetch({ store, params }) {
-    await store.dispatch('candles/fetchAllProducts');
+  data() {
+    return {
+      products: []
+    }
   },
+  async fetch() {
+    this.products = await this.$shopify.product.fetchAll();
+  },
+  layout: 'detail',
+  // async fetch({ store, params }) {
+  //   await store.dispatch('candles/fetchAllProducts');
+  // },
   computed: {
-    products() {
-      return this.$store.state.candles.products;
-    },
+    // products() {
+    //   return this.$store.state.candles.products;
+    // },
     checkout() {
       return this.$store.state.candles.checkout;
     }
