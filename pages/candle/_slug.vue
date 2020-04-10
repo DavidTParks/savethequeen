@@ -18,8 +18,11 @@
                         <img class="h-144 w-full object-contain bg-gray-100" :src="candle.images[0].src">
                     </div>
                     <div class="w-1/2 px-4 sm:px-6 lg:px-8">
-                        <h3 class="mt-2 text-xl leading-8 font-extrabold tracking-tight text-gray-900 sm:leading-10 text-left">${{candle.variants[0].price}}</h3>
-                        <h1 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-left">{{candle.title}}</h1>
+                        <div class="flex items-center">
+                            <h3 class="mt-2 text-xl leading-8 font-extrabold tracking-tight text-gray-900 sm:leading-10 text-left">${{candle.variants[0].price}}</h3>
+                            <div v-if="candle.availableForSale" class="bg-gray-200 text-gray-900 rounded-full py-2 px-4 ml-4 text-xs uppercase tracking-wider">In Stock</div>
+                        </div>
+                        <h1 class="mt-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-left">{{candle.title}}</h1>
                         <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">{{candle.description}}</p>
                         <div class="flex items-center justify-center flex-col mt-12">
                             <button v-if="cart.indexOf(candle.variants[0].id) === -1" @click="addItemToCart" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
