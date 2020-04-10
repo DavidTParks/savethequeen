@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <div class="py-12 bg-white">
+    <div class="bg-white">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <template v-if="$fetchState.pending">
                 <content-placeholders  :rounded="true">
@@ -13,7 +13,24 @@
             </p>
             </template>
             <template v-else>
-                <div class="flex">
+                <ul class="flex items-center py-4 mt-4">
+                    <li class="flex items-center mr-2">
+                        <nuxt-link class="mr-2" to="/">Home</nuxt-link>
+                        <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5L16 12L9 19" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+                    <li class="flex items-center mr-2">
+                        <nuxt-link class="mr-2" to="/candles">Candles</nuxt-link>
+                        <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5L16 12L9 19" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+                    <li class="flex items-center mr-2">
+                        {{candle.title}}
+                    </li>
+                </ul>
+                <div class="flex pt-4 py-12">
                     <div class="w-1/2">
                         <img class="h-144 w-full object-contain bg-gray-100" :src="candle.images[0].src">
                     </div>
@@ -86,6 +103,17 @@ export default {
     },
     cart() {
       return this.$store.state.candles.cart;
+    },
+    crumbs () {
+        let crumbs = []
+        this.$route.matched.forEach((item) => {
+            if (breadcrumbs[item.name] || breadcrumbs[item.path]) {
+            item.breadcrumb = breadcrumbs[item.name] || breadcrumbs[item.path]
+            crumbs.push(item)
+            }
+        })
+
+        return crumbs
     }
   }
 };
