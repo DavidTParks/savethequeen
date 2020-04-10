@@ -6,7 +6,7 @@
       <h2
         class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mt-12 lg:text-center"
       >Featured Products</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
         <template v-for="product in products">
           <ProductCard :key="product.id" :product="product"></ProductCard>
         </template>
@@ -27,30 +27,31 @@ export default {
     MarketingSection,
     ProductCard
   },
-  async fetch({ store, params }) {
-    await store.dispatch("candles/fetchAllProducts");
+  data() {
+    return {
+      products: [],
+      collections: [],
+    }
   },
+  async fetch() {
+    this.products = await this.$shopify.product.fetchAll();
+    this.collections = await this.$shopify.collection.fetchAllWithProducts();
+  },
+  // async fetch({ store, params }) {
+  //   await store.dispatch("candles/fetchAllProducts");
+  // },
   computed: {
-    products() {
-      return this.$store.state.candles.products;
+    // products() {
+    //   return this.$store.state.candles.products;
+    // },
+    homePageCandles() {
+      return this.collections.find(collection => {
+        return collection.title === "Home page"
+      })
     },
     checkout() {
       return this.$store.state.candles.checkout;
     },
-    collections() {
-      return this.$store.state.candles.collections;
-    },
-    homePageCollection() {
-      return this.collections.filter(collection => {
-        return (
-          collection.id ===
-          "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzE2MDQ4NDU4OTY0NQ=="
-        );
-      });
-    },
-    homePageCollectionProducts() {
-      return this.homePageCollection.products;
-    }
   }
 };
 </script>

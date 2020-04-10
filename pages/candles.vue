@@ -50,11 +50,13 @@ export default {
   },
   data() {
     return {
-      products: []
+      products: [],
+      collections: [],
     }
   },
   async fetch() {
     this.products = await this.$shopify.product.fetchAll();
+    this.collections = await this.$shopify.collection.fetchAllWithProducts();
   },
   layout: 'detail',
   computed: {
