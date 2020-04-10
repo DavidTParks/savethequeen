@@ -15,7 +15,7 @@
                     <tr>
                         <th class="text-left column-style">Product</th>
                         <th class="text-right column-style">Price</th>
-                        <th class="text-right column-style">Quantity</th>
+                        <th class="text-center column-style">Quantity</th>
                         <th class="text-right column-style">Total</th>
                     </tr>
                 </thead>
@@ -34,7 +34,7 @@
                             <td class="text-right">
                                 ${{lineItem.variant.price}}
                             </td>
-                            <td class="text-right">
+                            <td class="text-center">
                                 
                                 {{lineItem.quantity}}
                             </td>

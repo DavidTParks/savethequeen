@@ -2,19 +2,19 @@
   <div class="py-12 bg-white">
     <div class="mx-auto">
       <div class="lg:text-center">
-        <p class="text-base leading-6 text-yellow-600 font-semibold tracking-wide uppercase">Candles</p>
+        <p class="text-base leading-6 text-red-600 font-semibold tracking-wide uppercase">Candles</p>
         <h3
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >What Sets Us Apart</h3>
       </div>
 
-      <div class="mt-10">
+      <div class="mt-12">
         <ul class="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
           <li>
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white"
                 >
                   <svg
                     class="h-6 w-6"
@@ -46,7 +46,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white"
                 >
                   <svg
                     class="h-6 w-6"
@@ -78,7 +78,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white"
                 >
                   <svg
                     class="h-6 w-6"
@@ -110,7 +110,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white"
                 >
                   <svg
                     class="h-6 w-6"

@@ -58,7 +58,7 @@
               <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">About Us</a>
             </div>
             <div>
-              <nuxt-link to="/cart" class="block w-full px-5 py-3 text-center font-medium text-yellow-600 bg-gray-50 hover:bg-gray-100 hover:text-yellow-700 focus:outline-none focus:bg-gray-100 focus:text-yellow-700 transition duration-150 ease-in-out">
+              <nuxt-link to="/cart" class="block w-full px-5 py-3 text-center font-medium text-red-600 bg-gray-50 hover:bg-gray-100 hover:text-red-700 focus:outline-none focus:bg-gray-100 focus:text-red-700 transition duration-150 ease-in-out">
                 Cart
               </nuxt-link>
             </div>
@@ -71,19 +71,19 @@
           <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
             Save The Queen
             <br class="xl:hidden" />
-            <span class="text-yellow-600">Candle Company</span>
+            <span class="text-red-600">Candle Company</span>
           </h2>
           <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils. 
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
-              <nuxt-link to="/candles" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+              <nuxt-link to="/candles" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                 See Products
               </nuxt-link>
             </div>
             <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-700 bg-gray-200 hover:text-gray-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-700 bg-gray-200 hover:text-gray-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-red-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                 About Us
               </a>
             </div>
@@ -96,7 +96,7 @@
     </div>
   </div>
   <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://savethequeencandleco.imgix.net/%C2%A9+Gloss+Photography+Studios-85.jpg?q=1" alt="" />
+    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://savethequeencandlecopictures.s3.us-east-2.amazonaws.com/%C2%A9+Gloss+Photography+Studios-172.jpg" alt="" />
   </div>
 </div>
 </template>
