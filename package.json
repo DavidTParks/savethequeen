@@ -16,7 +16,7 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.0",
-    "nuxt": "latest",
+    "nuxt": "^2.12.2",
     "nuxt-shopify": "^1.8.1",
     "vue-content-placeholders": "^0.2.1"
   },
