@@ -6,12 +6,34 @@
       <h2
         class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mt-12 lg:text-center"
       >Featured Products</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-        <template v-for="product in products">
-          <ProductCard :key="product.id" :product="product"></ProductCard>
+      <template v-if="$fetchState.pending">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+          <content-placeholders  :rounded="true">
+            <content-placeholders-img />
+            <content-placeholders-heading />
+          </content-placeholders>
+          <content-placeholders  :rounded="true">
+            <content-placeholders-img />
+            <content-placeholders-heading />
+          </content-placeholders>
+          <content-placeholders  :rounded="true">
+            <content-placeholders-img />
+            <content-placeholders-heading />
+          </content-placeholders>
+        </div>
+      </template>
+      <template v-else-if="$fetchState.error">
+        <p>
+          Error while fetching posts: {{ error }}
+        </p>
+      </template>
+        <template v-else>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+            <template v-for="collection in collections">
+              <FeaturedProductCard :key="collection.id" :collection="collection"></FeaturedProductCard>
+            </template>
+          </div>
         </template>
-
-      </div>
     </div>
   </div>
 </template>
@@ -20,13 +42,13 @@
 import NavBar from "~/components/NavBar.vue";
 import Hero from "~/components/Hero.vue";
 import MarketingSection from "~/components/MarketingSection";
-import ProductCard from "~/components/ProductCard.vue";
+import FeaturedProductCard from "~/components/FeaturedProductCard.vue";
 export default {
   components: {
     NavBar,
     Hero,
     MarketingSection,
-    ProductCard
+    FeaturedProductCard
   },
   data() {
     return {
@@ -38,18 +60,7 @@ export default {
     this.products = await this.$shopify.product.fetchAll();
     this.collections = await this.$shopify.collection.fetchAllWithProducts();
   },
-  // async fetch({ store, params }) {
-  //   await store.dispatch("candles/fetchAllProducts");
-  // },
   computed: {
-    // products() {
-    //   return this.$store.state.candles.products;
-    // },
-    homePageCandles() {
-      return this.collections.find(collection => {
-        return collection.title === "Home page"
-      })
-    },
     checkout() {
       return this.$store.state.candles.checkout;
     },
