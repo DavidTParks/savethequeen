@@ -2,7 +2,7 @@
 <div class="min-h-screen bg-gray-100">
     <div class="py-8">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <template v-if="$fetchState.pending">
+          <template>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
               <content-placeholders  :rounded="true">
                 <content-placeholders-img></content-placeholders-img>
@@ -18,7 +18,7 @@
               </content-placeholders>
             </div>
           </template>
-          <template v-else-if="$fetchState.error">
+          <template v-if="$fetchState.error">
             <p>
               Error while fetching posts: {{ error }}
             </p>
@@ -57,7 +57,6 @@ export default {
     this.products = await this.$shopify.product.fetchAll();
   },
   layout: 'detail',
-  fetchOnServer: false,
   computed: {
     checkout() {
       return this.$store.state.candles.checkout;
