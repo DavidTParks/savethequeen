@@ -57,6 +57,7 @@ export default {
     this.products = await this.$shopify.product.fetchAll();
   },
   layout: 'detail',
+  fetchOnServer: false,
   computed: {
     checkout() {
       return this.$store.state.candles.checkout;
