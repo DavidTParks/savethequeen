@@ -35,7 +35,9 @@ export default {
 	/*
   ** Plugins to load before mounting the App
   */
-	plugins: [],
+	plugins: [
+    '@/plugins/vue-placeholders.js'
+  ],
 	/*
   ** Nuxt.js dev-modules
   */
@@ -92,9 +94,6 @@ export default {
       '/cart',
     ],
   },
-  plugins: [
-    '@/plugins/vue-placeholders.js'
-  ],
 	/*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
