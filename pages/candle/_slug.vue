@@ -113,34 +113,4 @@ export default {
 </script>
 
 <style>
-.page-enter-active, .page-leave-active {
-  transition: opacity .3s;
-}
-.page-enter, .page-leave-to {
-  opacity: 0;
-}
-
-
-.rotate {
-    animation-name: spin;
-    animation-duration: 1000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; 
-}
-.breadcrumb-style {
-    @apply flex items-center mr-2;
-}
-
-@-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
-}
 </style>
