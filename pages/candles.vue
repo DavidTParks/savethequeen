@@ -5,8 +5,8 @@
           <template v-if="$fetchState.pending">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
               <content-placeholders  :rounded="true">
-                <content-placeholders-img />
-                <content-placeholders-heading />
+                <content-placeholders-img></content-placeholders-img>
+                <content-placeholders-heading></content-placeholders-heading>
               </content-placeholders>
               <content-placeholders  :rounded="true">
                 <content-placeholders-img />
