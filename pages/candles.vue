@@ -1,5 +1,5 @@
 <template>
-<div class="min-h-screen bg-gray-100">
+<div class="min-h-screen bg-gray-100 pb-24">
   <div class="py-8">
       <div class="max-w-screen-xl mx-auto pr-4 sm:pr-6 lg:pr-8">
         <div class="flex-col flex sm:flex-row">

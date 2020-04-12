@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen pb-24">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <template v-if="$fetchState.pending">
             <content-placeholders class="pt-4"  :rounded="true">
