@@ -1,8 +1,15 @@
 <template>
     <div class="w-full bg-white cursor-pointer relative">
-        <nuxt-link :to="`/candles?collection=${collection.id}`">
-            <img class="object-cover h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="collection.image.src" :alt="collection.image.altText">
-        </nuxt-link>
+        <template v-if="collection.id === customPourID">
+            <nuxt-link :to="`/custom-pours`">
+                <img class="object-cover h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="collection.image.src" :alt="collection.image.altText">
+            </nuxt-link>
+        </template>
+        <template v-else>
+            <nuxt-link :to="`/candles?collection=${collection.id}`">
+                <img class="object-cover h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="collection.image.src" :alt="collection.image.altText">
+            </nuxt-link>
+        </template>
         <div class="p-4 text-center">
             <h3 class="">{{collection.title}}</h3>
         </div>
@@ -16,6 +23,11 @@ export default {
     props: {
        collection: Object,
     },
+    data() {
+        return {
+            customPourID: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzE2MDg0NzI2NTg2OQ=="
+        }
+    },  
     computed: {
         checkout() {
             return this.$store.state.candles.checkoutID;
