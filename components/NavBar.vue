@@ -12,7 +12,7 @@
     </nuxt-link>
   </div>
 
-    <div class="text-sm leading-5 hidden md:flex items-center md:pr-4">
+    <div class="text-sm leading-5 flex items-center md:pr-4 mr-2">
       <nuxt-link to="/candles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Candles</nuxt-link>
       <nuxt-link class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out relative" to="/cart">
         <svg class="inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,13 +21,6 @@
         <span class="rounded-full h-6 w-6 inline-flex items-center justify-center bg-gray-900 text-white text-base text-center absolute -top-4 -right-4" v-if="cart.length">{{cart.length}}</span>
       </nuxt-link>
     </div>
-    <div class="flex items-center md:hidden -mr-2">
-      <button @click="open = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      </div>
   </div>
   </header>
 </template>
