@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen pb-24">
     <Hero></Hero>
     <div class="container max-w-5xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
       <MarketingSection />
