@@ -95,7 +95,7 @@
     </div>
   </div>
   <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="http://savethequeencandleco.imgix.net/homepage.jpg?q=1" alt="" />
+    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://savethequeencandleco.imgix.net/homepage.jpg?q=1" alt="" />
   </div>
 </div>
 </template>
