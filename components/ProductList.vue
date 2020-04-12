@@ -1,11 +1,34 @@
 <template>
-    <div v-if="products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 pt-6">
-        <template v-for="candle in products">
-            <ProductCard class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
+    <div>
+        <template v-if="$fetchState.pending">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 pt-6">
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+            </div>
         </template>
-        </div>
-        <div v-else class="px-6 pt-6">
-        <h3>No Products Found</h3>
+        <template v-else-if="$fetchState.error">
+            <h3>Error fetching candles</h3>
+        </template>
+        <template v-else>
+            <div v-if="products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 pt-6">
+                <template v-for="candle in products">
+                    <ProductCard class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
+                </template>
+            </div>
+            <div v-else class="px-6 pt-6">
+                <h3>No Products Found</h3>
+            </div>
+        </template>
     </div>
 </template>
 
