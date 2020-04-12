@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         handleCollectionSorting(collection) {
-        this.$emit('collectionSelected', collection);
+            this.$emit('collectionSelected', collection);
         }
     }
 }

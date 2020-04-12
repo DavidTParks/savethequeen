@@ -2,7 +2,7 @@
 <div class="min-h-screen bg-gray-100">
     <div class="py-8">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <template v-if="$fetchState.pending">
+          <!-- <template v-if="$fetchState.pending">
           <div class="flex-col flex sm:flex-row">
             <div class="w-full sm:w-1/4 mt-12 px-4">
               <content-placeholders>
@@ -32,23 +32,16 @@
               Error while fetching posts: {{ error }}
             </p>
           </template>
-           <template v-else>
+           <template v-else> -->
               <div class="flex-col flex sm:flex-row">
                 <div class="w-full sm:w-1/4">
                   <FilterNav @collectionSelected="handleCollectionSorting" :selected="selected" />
                 </div>
                 <div class="w-full sm:w-3/4">
-                  <div v-if="products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 pt-6">
-                    <template v-for="candle in products">
-                        <ProductCard class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
-                    </template>
-                  </div>
-                  <div v-else class="px-6 pt-6">
-                    <h3>No Products Found</h3>
-                  </div>
+                  <ProductList/>
                 </div>
               </div>
-            </template>
+            <!-- </template> -->
         </div>
     </div>
   </div>
@@ -60,6 +53,7 @@ import NavBar from '~/components/NavBar.vue'
 import Hero from '~/components/Hero.vue'
 import MarketingSection from '~/components/MarketingSection'
 import ProductCard from '~/components/ProductCard.vue'
+import ProductList from '~/components/ProductList.vue'
 import FilterNav from '~/components/FilterNav.vue'
 export default {
   components: {
@@ -67,12 +61,12 @@ export default {
     Hero,
     MarketingSection,
     ProductCard,
+    ProductList,
     FilterNav
   },
   data() {
     return {
       products: [],
-      collections: [],
       selected: '',
     }
   },
@@ -84,7 +78,6 @@ export default {
     } else {
       this.products = await this.$shopify.product.fetchAll();
     }
-    this.collections = await this.$shopify.collection.fetchAllWithProducts();
   },
   methods: {
     handleCollectionSorting(collection) {
