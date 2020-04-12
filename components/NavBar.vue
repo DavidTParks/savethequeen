@@ -1,4 +1,5 @@
 <template>
+<div class="max-w-screen-xl mx-auto ">
 <header class="relative z-10 border-b border-gray-200 bg-white flex items-center justify-between px-4 py-4 lg:px-8 pt-6 px-4 sm:px-6 lg:px-8 pb-6">
   <div class="flex items-end">
     <nuxt-link to="/" class="flex items-center">
@@ -28,6 +29,7 @@
       </button>
       </div>
   </header>
+</div>
 </template>
 
 <script>
