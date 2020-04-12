@@ -1,7 +1,7 @@
 <template>
 <div class="min-h-screen bg-gray-100">
   <div class="py-8">
-      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-screen-xl mx-auto pr-4 sm:pr-6 lg:pr-8">
         <div class="flex-col flex sm:flex-row">
           <div class="w-full sm:w-1/4">
             <FilterNav @collectionSelected="handleCollectionSorting" :selected="selected" />
