@@ -1,6 +1,6 @@
 <template>
     <div class="w-full bg-white cursor-pointer relative">
-        <nuxt-link :to="`/candles?collection=${collection.handle}`">
+        <nuxt-link :to="`/candles?collection=${collection.id}`">
             <img class="object-cover h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="collection.image.src" :alt="collection.image.altText">
         </nuxt-link>
         <div class="p-4 text-center">
