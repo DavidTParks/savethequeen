@@ -14,6 +14,30 @@
                     <content-placeholders-img />
                     <content-placeholders-heading />
                 </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
+                <content-placeholders  :rounded="true">
+                    <content-placeholders-img />
+                    <content-placeholders-heading />
+                </content-placeholders>
             </div>
         </template>
         <template v-else-if="$fetchState.error">
