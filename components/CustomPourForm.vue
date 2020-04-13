@@ -2,14 +2,14 @@
 <form class="w-full max-w-lg mx-auto shadow-2xl rounded-lg overflow-hidden p-4" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="custom-pour-form" action="/thank-you">
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
         First Name *
       </label>
       <input type="hidden" name="form-name" value="custom-pour" />
       <input name="first-name" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Jane">
     </div>
     <div class="w-full md:w-1/2 px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="last-name">
         Last Name *
       </label>
       <input name="last-name" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
@@ -17,7 +17,7 @@
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
         Email *
       </label>
       <input name="email" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" placeholder="example@example.com">
@@ -26,7 +26,7 @@
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="phone-number">
         Phone Number *
       </label>
       <input name="phone-number" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-number" type="tel" placeholder="444-444-4444">
@@ -34,7 +34,7 @@
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-scents">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="scent">
         Optional Scent
       </label>
       <div class="relative mb-3">
@@ -52,7 +52,7 @@
         <p class="text-gray-600 text-xs italic">Our candles are normally fragrance free, but if you'd like a scent please select one.</p>
     </div>
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="item-to-pour">
         Item To Pour *
       </label>
       <input name="item-to-pour" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-item" type="text" placeholder="">
@@ -60,7 +60,7 @@
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="item-description">
             Description of item *
         </label>
         <textarea name="item-description" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-descrption" type="tel" placeholder="Describe your item"/>
@@ -68,7 +68,7 @@
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="item-picture">
             Optional picture of item
         </label>
         <input name="item-picture" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-file-upload" type="file" placeholder="Describe your item"/>
