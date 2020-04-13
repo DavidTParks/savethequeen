@@ -1,5 +1,9 @@
 <template>
     <div>
+        <content-placeholders  :rounded="true">
+            <content-placeholders-img />
+            <content-placeholders-heading />
+        </content-placeholders>
         <template v-if="$fetchState.pending">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 pt-6">
                 <content-placeholders  :rounded="true">
