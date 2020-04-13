@@ -4,10 +4,18 @@
       <div class="max-w-screen-xl mx-auto pr-4 sm:pr-6 lg:pr-8">
         <div class="flex-col flex sm:flex-row">
           <div class="w-full sm:w-1/4">
-            <FilterNav @collectionSelected="handleCollectionSorting" :selected="selected" />
+            <FilterNav 
+            @collectionSelected="handleCollectionSorting" 
+            @priceSorted="handlePriceSorting"
+            @resetFilters="resetFilters"
+            :selected="selected"
+            :selected-price="price" 
+            />
           </div>
           <div class="w-full sm:w-3/4">
-            <ProductList/>
+            <ProductList
+            :selected-price="price" 
+            />
           </div>
         </div>
       </div>
@@ -36,6 +44,7 @@ export default {
     return {
       products: [],
       selected: '',
+      price: '',
     }
   },
   async fetch() {
@@ -56,6 +65,18 @@ export default {
         this.selected = collection.id;
         this.$router.push({path: this.$route.path, query: { collection: collection.id }});
       }
+    },
+    handlePriceSorting(price) {
+      if(this.price === price.value) {
+        this.price = '';
+      } else {
+        this.price = price.value;
+      }
+    },
+    resetFilters() {
+      this.$router.push(this.$route.path);
+      this.price = '';
+      this.selected = '';
     }
   },
   layout: 'detail',

@@ -44,8 +44,8 @@
             <h3>Error fetching candles</h3>
         </template>
         <template v-else>
-            <div v-if="products.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6 pt-6">
-                <template v-for="candle in products">
+            <div v-if="filteredProductsByPrice.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 pt-6">
+                <template v-for="candle in filteredProductsByPrice">
                     <ProductCard class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
                 </template>
             </div>
@@ -60,6 +60,7 @@
 import ProductCard from '~/components/ProductCard.vue'
 export default {
     name: 'product-list',
+    props: ['selectedPrice'],
     components: {
         ProductCard
     },
@@ -75,6 +76,17 @@ export default {
             this.products = collection.products;
         } else {
             this.products = await this.$shopify.product.fetchAll();
+        }
+    },
+    computed: {
+        filteredProductsByPrice() {
+            if(this.selectedPrice) {
+                return this.products.filter(product => {
+                    return product.variants[0].price === this.selectedPrice;
+                })
+            } else {
+                return this.products;
+            }
         }
     },
     watch: {
