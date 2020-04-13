@@ -8,7 +8,7 @@
             <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto">To inquire about a custom pour, please fill out the contact form below.</p>
           </div>
           <div class="w-full sm:w-1/2">
-            <img class="mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl mx-auto" src="http://savethequeencandleco.imgix.net/custom-pour-86.jpg?q=1"/>
+            <img class="mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl mx-auto" src="https://savethequeencandleco.imgix.net/custom-pour-86.jpg?q=1"/>
           </div>
         </div>
         <div class="mx-auto">
