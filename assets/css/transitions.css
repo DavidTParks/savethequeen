@@ -12,7 +12,7 @@
     animation-timing-function: linear; 
 }
 .breadcrumb-style {
-    @apply flex items-center mr-2 text-xs;
+    @apply flex items-center mr-2 text-sm;
 }
 
 @-moz-keyframes spin {
