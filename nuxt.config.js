@@ -61,6 +61,12 @@ export default {
       return ['/'].concat(routes)
     }
   },
+  purgeCSS: {
+    whitelist: [
+      './assets/css/*.css',
+      './assets/css/*.scss',
+      ],
+  },
 	/*
   ** Nuxt.js modules
   */
