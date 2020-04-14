@@ -85,6 +85,26 @@ export default {
           products: [],
       }
   },
+  head () {
+    return {
+      title: `${this.candle.title} - Save The Queen Candle Co.`,
+      meta: [
+        { hid: 'description', name: 'description', content: this.candle.description },
+        {
+          hid: `keywords`,
+          name: 'keywords',
+          content: `candle, candles, beeswax candle, Wisconsin candle`
+        },
+        //Open Graph og:image:secure_url
+        { name: 'og:title', content: `${this.candle.title} - Save The Queen Candle Co.` },
+        { name: 'og:description', content: this.candle.description },
+        { name: 'og:image', content: `${this.candle.images[0].src}` },
+        { name: 'og:image:secure_url', content: `${this.candle.images[0].src}` },
+        { name: 'og:url', content: `https://savethequeencandleco.com/candle/${this.$route.params.slug}` },
+        { name: 'og:type', content: 'article' },
+      ]
+    }
+  },
   async fetch() {
     this.candle = await this.$shopify.product.fetch(this.$route.params.slug);
     this.collections = await this.$shopify.collection.fetchAllWithProducts();
