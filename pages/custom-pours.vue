@@ -22,8 +22,7 @@
             <img class="mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto rounded-lg overflow-hidden shadow-lg" src="https://savethequeencandleco.imgix.net/custom-pour-86.jpg?q=1"/>
           </div>
         </div>
-        <div class="mx-auto">
-          <h2 class="text-center mt-24 mb-6 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Custom Pour Form</h2>
+        <div class="mx-auto mt-8 sm:mt-24">
           <CustomPourForm/>
         </div>
       </div>

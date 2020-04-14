@@ -7,7 +7,7 @@
             <span class="flex items-center absolute top-0 left-0 rounded-full py-2 px-4 bg-gray-900 text-white m-2 shadow text-base">
                 <p class="">${{product.variants[0].price}}</p>
             </span>
-            <h3 class="">{{product.title}}</h3>
+            <h3 class="text-lg leading-6 font-medium text-gray-900 truncate">{{product.title}}</h3>
         </div>
         <div class="flex items-center justify-center">
             <button v-if="cart.indexOf(product.variants[0].id) === -1" @click="addItemToCart" class="w-48 flex items-center justify-center px-4 py-1 border border-transparent text-xs leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out">
