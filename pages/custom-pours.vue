@@ -36,6 +36,26 @@ export default {
    layout: "detail",
    components: {
      CustomPourForm
-   }
+   },
+   head () {
+    return {
+      title: `Custom Pours - Save The Queen Candle Co.`,
+      meta: [
+        { hid: 'description', name: 'description', content: 'We can custom pour a unique candle in the glass container of your choice for $3.00 per ounce. Many of our customers have turned inherited family glassware into functional and meaningful treasures that can be repoured over & over again.' },
+        {
+          hid: `keywords`,
+          name: 'keywords',
+          content: `custom pours, candle, candles, beeswax candle, Wisconsin candle`
+        },
+        //Open Graph og:image:secure_url
+        { name: 'og:title', content: `Custom Pours - Save The Queen Candle Co.` },
+        { name: 'og:description', content: 'We can custom pour a unique candle in the glass container of your choice for $3.00 per ounce. Many of our customers have turned inherited family glassware into functional and meaningful treasures that can be repoured over & over again.' },
+        { name: 'og:image', content: `https://savethequeencandleco.imgix.net/custom-pour-86.jpg` },
+        { name: 'og:image:secure_url', content: `https://savethequeencandleco.imgix.net/custom-pour-86.jpg` },
+        { name: 'og:url', content: `https://savethequeencandleco.com/custom-pours` },
+        { name: 'og:type', content: 'article' },
+      ]
+    }
+  },
 }
 </script>
