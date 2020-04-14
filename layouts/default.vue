@@ -16,7 +16,7 @@ export default {
 
 <style>
 html {
-  font-family: 'Merriweather', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
