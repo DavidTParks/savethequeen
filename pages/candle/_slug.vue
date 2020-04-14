@@ -93,7 +93,7 @@ export default {
         {
           hid: `keywords`,
           name: 'keywords',
-          content: `candle, candles, beeswax candle, Wisconsin candle`
+          content: `${this.candle.title}, candle, candles, beeswax candle, Wisconsin candle`
         },
         //Open Graph og:image:secure_url
         { name: 'og:title', content: `${this.candle.title} - Save The Queen Candle Co.` },
