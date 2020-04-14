@@ -44,7 +44,7 @@
             <h3>Error fetching candles</h3>
         </template>
         <template v-else>
-            <div v-if="filteredProductsByPrice.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 pt-6">
+            <div v-if="filteredProductsByPrice.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:pr-0 pt-6">
                 <template v-for="candle in filteredProductsByPrice">
                     <ProductCard class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
                 </template>
