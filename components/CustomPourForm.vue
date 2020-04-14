@@ -1,6 +1,6 @@
 <template>
 <form class="w-full max-w-2xl mx-auto shadow-2xl rounded-lg overflow-hidden p-4 px-8" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="custom-pour-form" action="/thank-you" enctype="multipart/form-data">
-  <h2 class="text-center mb-6 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Custom Pour Form</h2>
+  <h2 class="text-left sm:text-center mb-6 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Custom Pour Form</h2>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
