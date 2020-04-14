@@ -12,14 +12,14 @@
                 <nuxt-link class="mr-2" to="/custom-pours">Custom Pours</nuxt-link>
             </li>
         </ul>
-        <div class="flex flex-col sm:flex-row">
-          <div class="w-full sm:w-1/2">
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full md:w-1/2">
             <h1 class="text-4xl tracking-tight leading-10 font-extrabold text-red-600 md:mt-5 md:text-xl mx-auto sm:text-5xl sm:leading-none md:text-6xl text-left mt-4">Custom Pours</h1>
-            <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto">We can custom pour a unique candle in the glass container of your choice for $3.00 per ounce. Many of our customers have turned inherited family glassware into functional and meaningful treasures that can be repoured over & over again.</p>
-            <p class="mt-3 text-base text-gray-900 sm:mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto font-semibold">To inquire about a custom pour, please fill out the contact form below. We will get back to you soon!</p>
+            <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto md:pr-8">We can custom pour a unique candle in the glass container of your choice for $3.00 per ounce. Many of our customers have turned inherited family glassware into functional and meaningful treasures that can be repoured over & over again.</p>
+            <p class="mt-3 text-base text-gray-900 sm:mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto font-semibold md:pr-8">To inquire about a custom pour, please fill out the contact form below. We will get back to you soon!</p>
           </div>
-          <div class="w-full sm:w-1/2">
-            <img class="mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl mx-auto" src="https://savethequeencandleco.imgix.net/custom-pour-86.jpg?q=1"/>
+          <div class="w-full md:w-1/2">
+            <img class="mt-5 sm:text-lg md:mt-5 md:text-xl mx-auto rounded-lg overflow-hidden shadow-lg" src="https://savethequeencandleco.imgix.net/custom-pour-86.jpg?q=1"/>
           </div>
         </div>
         <div class="mx-auto">
