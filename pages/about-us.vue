@@ -22,7 +22,7 @@
                     <p class="text-left mx-auto mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg md:mt-5 md:text-2xl sm:max-w-lg">By sharing our unique, upcycled candles with you we have the opportunity to support organizations that are working to increase the honeybee population in our country, which is at risk.</p>
                 </div>
             </div>
-            <nuxt-link to="/candles" class="w-full max-w-md sm:max-w-sm mx-auto flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+            <nuxt-link to="/candles" class="mt-12 w-full max-w-md sm:max-w-sm mx-auto flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                 Browse Candles
             </nuxt-link>
         </div>
