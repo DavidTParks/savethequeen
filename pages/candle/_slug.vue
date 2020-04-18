@@ -59,8 +59,8 @@
             <div class="py-12">
                 <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mt-12 lg:text-center"
                 >Related Products</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-                    <template v-for="index in 3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                    <template v-for="index in 4">
                         <ProductCard :key="products[index].id" :product="products[index]"></ProductCard>
                     </template>
                 </div>
