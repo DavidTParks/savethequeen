@@ -67,7 +67,12 @@ export default {
                 {
                     id: "3",
                     value: "25.00",
-                    size: "Large (8oz or more)"
+                    size: "Large (8-12oz)"
+                },
+                {
+                    id: "4",
+                    value: "30.00",
+                    size: "Grande (12oz or more)"
                 }
             ]
         }
