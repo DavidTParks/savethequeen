@@ -12,7 +12,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:pr-0 py-4 sm:py-12 flex items-center rounded-lg px-6">
                 <img class="rounded-lg overflow-hidden shadow-lg ml-0 sm:-ml-0 h-96" src="https://savethequeencandleco.imgix.net/beeswax-01.jpg?q=1"/>
                 <div class="">
-                    <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-5xl text-left sm:max-w-lg mx-auto">The North Woods</h2>
+                    <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-5xl text-left sm:max-w-lg mx-auto">Wisconsin Beeswax</h2>
                     <p class="text-left mx-auto mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg md:mt-5 md:text-2xl sm:max-w-lg">We used beeswax from our family beehives located in the pristine woods of Northern Wisconsin. We immediatly became addicted to the mild allergen-free honey scent, long burn timne, warm glow and air-cleaning properties of beeswax.</p>
                 </div>
             </div>
