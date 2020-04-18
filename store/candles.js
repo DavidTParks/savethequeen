@@ -75,7 +75,6 @@ export const actions = {
     },
 
     async addItemToCart({ commit, state }, buyInfo) {
-        console.log(buyInfo.lineItemID)
 
         const lineItemsToAdd = [
             {

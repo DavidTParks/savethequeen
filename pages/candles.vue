@@ -1,7 +1,26 @@
 <template>
 <div class="min-h-screen bg-gray-100 pb-24">
   <div class="py-8">
-      <div class="max-w-screen-xl mx-auto pr-4 sm:pr-6 lg:pr-8">
+      <div class="max-w-screen-xl mx-auto sm:pr-6 lg:pr-8">
+        <div class="flex flex-col sm:flex-row justify-between">
+          <ul class="flex items-center px-6 sm:w-1/4">
+              <li class="breadcrumb-style">
+                  <nuxt-link class="mr-2" to="/">Home</nuxt-link>
+                  <svg class="h-4 w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5L16 12L9 19" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </li>
+              <li class="breadcrumb-style">
+                  <nuxt-link class="mr-2" to="/candles">Candles</nuxt-link>
+              </li>
+          </ul>
+          <div class="relative sm:w-3/4 mt-2 sm:mt-0 sm:ml-6 mx-4 sm:mr-2">
+            <input v-model="search" placeholder="Search for candles..." class="ml-0 pl-12 sm:ml-2 appearance-none w-full block bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"/>
+            <svg class="absolute left-0 top-0 bottom-0 right-0 my-auto sm:ml-6 ml-4 h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
         <div class="flex-col flex sm:flex-row">
           <div class="w-full sm:w-1/4">
             <FilterNav 
@@ -14,6 +33,7 @@
           </div>
           <div class="w-full sm:w-3/4">
             <ProductList
+            :search="search"
             :selected-price="price" 
             />
           </div>
@@ -45,6 +65,7 @@ export default {
       products: [],
       selected: '',
       price: '',
+      search: '',
     }
   },
   async fetch() {

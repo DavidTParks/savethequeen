@@ -60,7 +60,15 @@
 import ProductCard from '~/components/ProductCard.vue'
 export default {
     name: 'product-list',
-    props: ['selectedPrice'],
+    props: {
+        selectedPrice: {
+            type: String
+        },
+        search: {
+            type: String,
+            default: ''
+        }
+    },  
     components: {
         ProductCard
     },
@@ -81,12 +89,17 @@ export default {
     computed: {
         filteredProductsByPrice() {
             if(this.selectedPrice) {
-                return this.products.filter(product => {
+                return this.searchFilteredProducts.filter(product => {
                     return product.variants[0].price === this.selectedPrice;
                 })
             } else {
-                return this.products;
+                return this.searchFilteredProducts;
             }
+        },
+        searchFilteredProducts() {
+            return this.products.filter(product => {
+                return product.title.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
+            })
         },
         productSortPriceDescending() {
             return this.products.sort((a,b) => {
