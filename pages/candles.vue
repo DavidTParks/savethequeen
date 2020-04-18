@@ -83,6 +83,11 @@ export default {
   computed: {
     checkout() {
       return this.$store.state.candles.checkout;
+    },
+    productSortPriceDescending() {
+      return this.products.sort((a,b) => {
+        b.variants[0].price - a.variants[0].price
+      })
     }
   },
   watch: {

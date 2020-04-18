@@ -75,7 +75,7 @@ export default {
         let collection = await this.$shopify.collection.fetchWithProducts(this.$route.query.collection);
             this.products = collection.products;
         } else {
-            this.products = await this.$shopify.product.fetchAll();
+            this.products = await this.$shopify.product.fetchAll(50);
         }
     },
     computed: {
@@ -87,6 +87,11 @@ export default {
             } else {
                 return this.products;
             }
+        },
+        productSortPriceDescending() {
+            return this.products.sort((a,b) => {
+                parseInt(b.variants[0].price) - parseInt(a.variants[0].price)
+            })
         }
     },
     watch: {
