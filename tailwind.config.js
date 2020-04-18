@@ -20,6 +20,9 @@ module.exports = {
         '120': '30rem',
         '132': '33rem',
         '144': '36rem',
+      },
+      colors: {
+        'peach' : '#fff3e6'
       }
     }
   },

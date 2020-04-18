@@ -1,7 +1,7 @@
 <template>
     <div class="w-full cursor-pointer relative mb-8 sm:my-0">
         <nuxt-link :to="`/candle/${product.id}`">
-            <img class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg shadow-lg" :src="product.images[0].src" :alt="product.images[0].altText">
+            <img class="object-cover h-96 sm:h-72 w-full overflow-hidden rounded-lg shadow-lg" :src="product.images[0].src" :alt="product.images[0].altText">
         </nuxt-link>
         <div class="p-4 text-center">
             <span class="flex items-center absolute top-0 left-0 rounded-full py-2 px-4 bg-gray-900 text-white m-2 shadow text-base">
