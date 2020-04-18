@@ -97,6 +97,7 @@ export default {
     resetFilters() {
       this.$router.push(this.$route.path);
       this.price = '';
+      this.search = '';
       this.selected = '';
     }
   },
