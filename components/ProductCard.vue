@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full cursor-pointer relative mb-8 sm:my-0">
+    <div class="w-full cursor-pointer relative mb-8 sm:mb-12">
         <nuxt-link :to="`/candle/${product.id}`">
             <img class="object-cover h-96 sm:h-72 w-full overflow-hidden rounded-lg shadow-lg" :src="product.images[0].src" :alt="product.images[0].altText">
         </nuxt-link>
