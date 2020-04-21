@@ -80,23 +80,9 @@ export default {
 		'@nuxtjs/sitemap',
 		// Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-lazy-load',
+    // 'nuxt-lazy-load',
     '@nuxtjs/toast',
   ],
-  
-  toast: {
-      position: 'top-right',
-      duration: 3000,
-      register: [ // Register custom toasts
-        {
-          name: 'my-error',
-          message: 'Oops...Something went wrong',
-          options: {
-            type: 'error'
-          }
-        }
-      ]
-  },
 
 	shopify: {
 		/**
