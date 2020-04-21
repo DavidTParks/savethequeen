@@ -56,6 +56,23 @@ export default {
       collections: [],
     }
   },
+  head () {
+    return {
+      title: `Save The Queen Candle Co. | Collectible Vintage Candles`,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.' },
+        { hid: 'keywords', name: 'keywords', content: 'wisconsin candles, candle, beeswax candle, vintage glassware, vintage, beeswax' },
+        { name: 'og:title', content: `Save The Queen Candle Co. | Collectible Vintage Candles` },
+        { name: 'og:description', content: 'Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.' },
+        { name: 'og:url', content: `https://www.savethequeencandleco.com/` },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:image', content: `http://savethequeencandleco.imgix.net/homepage.jpg` },
+        { name: 'og:image:secure_url', content: `https://savethequeencandleco.imgix.net/homepage.jpg` },
+      ]
+    }
+  },
   async fetch() {
     this.collections = await this.$shopify.collection.fetchAllWithProducts();
   },
