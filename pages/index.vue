@@ -57,7 +57,6 @@ export default {
     }
   },
   async fetch() {
-    this.products = await this.$shopify.product.fetchAll();
     this.collections = await this.$shopify.collection.fetchAllWithProducts();
   },
   computed: {

@@ -83,7 +83,7 @@ export default {
         let collection = await this.$shopify.collection.fetchWithProducts(this.$route.query.collection);
             this.products = collection.products;
         } else {
-            this.products = await this.$shopify.product.fetchAll(50);
+            this.products = await this.$shopify.product.fetchAll(150);
         }
     },
     computed: {

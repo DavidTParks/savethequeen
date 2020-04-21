@@ -60,7 +60,7 @@ export default {
         storefrontAccessToken: process.env.SHOPIFY_TOKEN
       }, fetch);
 
-      const products = await client.product.fetchAll(50);
+      const products = await client.product.fetchAll(100);
       const routes = products.map(product => `/candle/${product.id}`)
 
       return ['/'].concat(routes)
