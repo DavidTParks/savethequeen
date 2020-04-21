@@ -2,12 +2,12 @@
     <div class="w-full bg-white cursor-pointer relative mb-8 sm:my-0">
         <template v-if="collection.id === customPourID">
             <nuxt-link :to="`/custom-pours`">
-                <img class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="collection.image.src" :alt="collection.image.altText">
+                <img class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="$shopify.image.helpers.imageForSize(collection.image, {maxWidth: 600, maxHeight: 600})" :alt="collection.image.altText">
             </nuxt-link>
         </template>
         <template v-else>
             <nuxt-link :to="`/candles?collection=${collection.id}`">
-                <img class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="collection.image.src" :alt="collection.image.altText">
+                <img class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="$shopify.image.helpers.imageForSize(collection.image, {maxWidth: 600, maxHeight: 600})"  :alt="collection.image.altText">
             </nuxt-link>
         </template>
         <div class="p-4 text-center">
