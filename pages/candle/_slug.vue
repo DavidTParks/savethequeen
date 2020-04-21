@@ -31,7 +31,7 @@
             </ul>
             <div class="flex flex-col pt-4 py-12 sm:flex-row">
                 <div class="w-full sm:w-1/2">
-                    <img class="h-96 sm:h-144 w-full object-contain bg-gray-100" :src="candle.images[0].src">
+                    <img class="h-96 sm:h-144 w-full object-contain bg-gray-100" :src="$shopify.image.helpers.imageForSize(candle.variants[0].image, {maxWidth: 1000, maxHeight: 1000})" :alt="candle.images[0].altText">
                 </div>
                 <div class="w-full sm:w-1/2 px-4 sm:px-6 lg:px-8 mt-4 sm:mt-0">
                     <div class="flex items-center">
