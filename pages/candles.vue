@@ -64,19 +64,9 @@ export default {
   },
   data() {
     return {
-      products: [],
       selected: '',
       price: '',
       search: '',
-    }
-  },
-  async fetch() {
-    if(this.$route.query.collection) {
-      this.selected = this.$route.query.collection;
-      let collection = await this.$shopify.collection.fetchWithProducts(this.$route.query.collection);
-      this.products = collection.products;
-    } else {
-      this.products = await this.$shopify.product.fetchAll();
     }
   },
   methods: {
@@ -113,9 +103,6 @@ export default {
         b.variants[0].price - a.variants[0].price
       })
     }
-  },
-  watch: {
-    '$route.query': '$fetch'
   },
 }
 </script>
