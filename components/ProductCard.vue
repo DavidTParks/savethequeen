@@ -2,13 +2,13 @@
     <div class="w-full relative mb-8 sm:mb-8 bg-gray-100">
         <nuxt-link class="cursor-pointer" :to="`/candle/${product.id}`">
             <!-- <img class="object-cover h-96 sm:h-72 w-full overflow-hidden rounded-lg shadow-lg" :src="product.images[0].src" :alt="product.images[0].altText"> -->
-            <img class="object-cover h-96 sm:h-72 w-full overflow-hidden" :src="$shopify.image.helpers.imageForSize(product.variants[0].image, {maxWidth: 500, maxHeight: 500})" :alt="product.images[0].altText">
+            <img class="object-cover h-56 sm:h-72 w-full overflow-hidden" :src="$shopify.image.helpers.imageForSize(product.variants[0].image, {maxWidth: 500, maxHeight: 500})" :alt="product.images[0].altText">
         </nuxt-link>
         <div class="py-4 text-center">
             <span class="flex items-center absolute top-0 left-0 rounded-full py-2 px-4 bg-gray-900 text-white m-2 shadow text-base">
                 <p class="">${{product.variants[0].price}}</p>
             </span>
-            <h3 class="text-xl py-4 leading-6 font-medium text-gray-900 truncate mt-0">{{product.title}}</h3>
+            <h3 class="text-xl py-2 sm:py-4 leading-6 font-medium text-gray-900 truncate mt-0">{{product.title}}</h3>
         </div>
         <div class="flex items-center justify-center">
             <button v-if="cart.indexOf(product.variants[0].id) === -1" @click="addItemToCart" class="w-full flex items-center justify-center px-10 py-2 border border-transparent text-sm leading-6 font-medium rounded-md text-gray-200 bg-gray-900 hover:text-white hover:bg-gray-800 focus:outline-none focus:shadow-outline focus:border-yellow-300 transition duration-150 ease-in-out">
