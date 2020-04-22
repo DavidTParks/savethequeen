@@ -68,10 +68,10 @@ export default {
   },
   purgeCSS: {
     whitelist: [
-      './assets/css/*.css',
-      './assets/css/*.scss',
-      './node_modules/vue-content-placeholders/dist/vue-content-placeholders.css',
-      './node_modules/vue-content-placeholders/src/styles.scss'
+      'assets/css/*.css',
+      'assets/css/*.scss',
+      'node_modules/vue-content-placeholders/dist/vue-content-placeholders.css',
+      'node_modules/vue-content-placeholders/src/styles.scss'
       ],
   },
 	/*
