@@ -13,7 +13,7 @@
   </div>
 
 
-    <div class="text-sm leading-5 flex items-center md:pr-4 mr-2">
+    <div class="text-sm leading-5 flex items-center md:pr-4 mr-2 sm:mr-8">
       <nuxt-link to="/candles" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Candles</nuxt-link>
       <nuxt-link to="/custom-pours" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-800 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Custom Pours</nuxt-link>
       <nuxt-link class="ml-2 mr-4 sm:mr-0 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out relative" to="/cart">

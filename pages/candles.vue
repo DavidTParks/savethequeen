@@ -1,9 +1,8 @@
 <template>
 <div class="min-h-screen bg-gray-100 pb-24">
   <div class="py-8">
-      <div class="max-w-screen-xl mx-auto sm:pr-6 lg:pr-8">
-        <div class="flex flex-col sm:flex-row justify-between">
-          <ul class="flex items-center px-6 sm:w-1/4">
+      <div class="max-w-screen-xl mx-auto sm:pr-6 lg:pr-6">
+            <ul class="flex items-center px-6 sm:w-1/4">
               <li class="breadcrumb-style">
                   <nuxt-link class="mr-2" to="/">Home</nuxt-link>
                   <svg class="h-4 w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,6 +13,9 @@
                   <nuxt-link class="mr-2" to="/candles">Candles</nuxt-link>
               </li>
           </ul>
+        <div class="flex flex-col sm:flex-row justify-between">
+          <div class="sm:w-1/4">
+          </div>
           <div class="relative sm:w-3/4 mt-6 sm:mt-0 sm:ml-6 mx-4 sm:mr-2">
             <input v-model="search" placeholder="Search for candles..." class="ml-0 pl-12 sm:ml-2 appearance-none w-full block bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"/>
             <svg class="absolute left-0 top-0 bottom-0 right-0 my-auto sm:ml-6 ml-4 h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
