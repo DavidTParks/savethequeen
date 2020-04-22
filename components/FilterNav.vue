@@ -90,6 +90,7 @@ export default {
         resetFilters() {
             this.$emit('resetFilters');
         }
-    }
+    },
+    fetchOnServer: false
 }
 </script>
