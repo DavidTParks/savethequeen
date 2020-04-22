@@ -29,7 +29,6 @@
             @collectionSelected="handleCollectionSorting" 
             @priceSorted="handlePriceSorting"
             @resetFilters="resetFilters"
-            :selected="selected"
             :selected-price="price" 
             />
           </div>
@@ -64,7 +63,6 @@ export default {
   },
   data() {
     return {
-      selected: '',
       price: '',
       search: '',
     }
@@ -73,9 +71,7 @@ export default {
     handleCollectionSorting(collection) {
       if(this.selected === collection.id) {
         this.$router.push(this.$route.path);
-        this.selected = '';
       } else {
-        this.selected = collection.id;
         this.$router.push({path: this.$route.path, query: { collection: collection.id }});
       }
     },
@@ -90,7 +86,6 @@ export default {
       this.$router.push(this.$route.path);
       this.price = '';
       this.search = '';
-      this.selected = '';
     }
   },
   layout: 'detail',
