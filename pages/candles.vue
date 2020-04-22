@@ -30,6 +30,7 @@
             @priceSorted="handlePriceSorting"
             @resetFilters="resetFilters"
             :selected-price="price" 
+            :selected="selected"
             />
           </div>
           <div class="w-full sm:w-3/4">
@@ -65,13 +66,17 @@ export default {
     return {
       price: '',
       search: '',
+      selected: '',
+      products: []
     }
   },
   methods: {
     handleCollectionSorting(collection) {
       if(this.selected === collection.id) {
+        this.selected = '';
         this.$router.push(this.$route.path);
       } else {
+        this.selected = collection.id;
         this.$router.push({path: this.$route.path, query: { collection: collection.id }});
       }
     },
@@ -86,6 +91,7 @@ export default {
       this.$router.push(this.$route.path);
       this.price = '';
       this.search = '';
+      this.selected = '';
     }
   },
   layout: 'detail',
@@ -93,11 +99,6 @@ export default {
     checkout() {
       return this.$store.state.candles.checkout;
     },
-    productSortPriceDescending() {
-      return this.products.sort((a,b) => {
-        b.variants[0].price - a.variants[0].price
-      })
-    }
   },
 }
 </script>

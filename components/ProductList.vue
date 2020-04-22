@@ -79,7 +79,6 @@ export default {
     },
     async fetch() {
         if(this.$route.query.collection) {
-            this.selected = this.$route.query.collection;
             let collection = await this.$shopify.collection.fetchWithProducts(this.$route.query.collection);
             this.products = collection.products;
         } else {

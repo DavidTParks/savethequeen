@@ -46,11 +46,10 @@
 <script>
 export default {
     name: 'filter-nav',
-    props: ['selectedPrice'],
+    props: ['selected', 'selectedPrice'],
     data() {
         return {
             collections: [],
-            selected: '',
             excludedCollections: [
                 "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzE2MDg0NzI2NTg2OQ=="
             ],
@@ -79,25 +78,16 @@ export default {
         }
     },
     async fetch() {
-        if(this.$route.query.collection) {
-            this.selected = this.$route.query.collection;
-        }
         this.collections = await this.$shopify.collection.fetchAllWithProducts();
     },
     methods: {
         handleCollectionSorting(collection) {
-            if(this.selected === collection.id) {
-                this.selected = '';
-            } else {
-                this.selected = collection.id;
-            }
             this.$emit('collectionSelected', collection);
         },
         handlePriceSorting(price) {
             this.$emit('priceSorted', price);
         },
         resetFilters() {
-            this.selected = '';
             this.$emit('resetFilters');
         }
     }
