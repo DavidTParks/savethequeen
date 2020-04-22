@@ -44,7 +44,7 @@
             <h3>Error fetching candles</h3>
         </template>
         <template v-else>
-            <div v-if="filteredProductsByPrice.length > 0" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:pr-0 pt-6">
+            <div v-if="productSortPriceDescending.length > 0" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:pr-0 pt-6">
                 <template v-for="candle in productSortPriceDescending">
                     <ProductCard v-if="candle.availableForSale" class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
                 </template>
@@ -89,15 +89,15 @@ export default {
     computed: {
         filteredProductsByPrice() {
             if(this.selectedPrice) {
-                return this.productSortPriceDescending.filter(product => {
+                return this.products.filter(product => {
                     return product.variants[0].price === this.selectedPrice;
                 })
             } else {
-                return this.productSortPriceDescending;
+                return this.products;
             }
         },
         searchFilteredProducts() {
-            return this.products.filter(product => {
+            return this.filteredProductsByPrice.filter(product => {
                 return product.title.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
             })
         },
