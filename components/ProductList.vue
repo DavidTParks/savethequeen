@@ -45,7 +45,7 @@
         </template>
         <template v-else>
             <div v-if="filteredProductsByPrice.length > 0" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:pr-0 pt-6">
-                <template v-for="candle in filteredProductsByPrice">
+                <template v-for="candle in productSortPriceDescending">
                     <ProductCard v-if="candle.availableForSale" class="my-4 sm:my-0" :key="candle.id" :product="candle"></ProductCard>
                 </template>
             </div>
@@ -89,11 +89,11 @@ export default {
     computed: {
         filteredProductsByPrice() {
             if(this.selectedPrice) {
-                return this.searchFilteredProducts.filter(product => {
+                return this.productSortPriceDescending.filter(product => {
                     return product.variants[0].price === this.selectedPrice;
                 })
             } else {
-                return this.searchFilteredProducts;
+                return this.productSortPriceDescending;
             }
         },
         searchFilteredProducts() {
@@ -102,8 +102,8 @@ export default {
             })
         },
         productSortPriceDescending() {
-            return this.products.sort((a,b) => {
-                parseInt(b.variants[0].price) - parseInt(a.variants[0].price)
+            return this.searchFilteredProducts.sort((a,b) => {
+                return parseInt(a.variants[0].price) - parseInt(b.variants[0].price)
             })
         }
     },
