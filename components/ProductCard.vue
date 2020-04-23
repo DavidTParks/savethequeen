@@ -54,7 +54,7 @@
       <button
         v-else
         @click="removeItemFromCart"
-        class="flex items-center justify-center w-full text-center rounded-lg bg-gray-200 px-6 py-4 text-base leading-6 font-semibold font-display text-gray-600 hover:text-teal-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
+        class="flex items-center justify-center w-full text-center rounded-lg bg-gray-200 px-6 py-4 text-base leading-6 font-semibold font-display text-gray-600 hover:text-gray-900 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
       >
         Remove From Cart
         <template
