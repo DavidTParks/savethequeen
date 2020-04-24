@@ -37,7 +37,24 @@ export default {
     layout: 'detail',
     components: {
         Hero
+    },
+      head () {
+    return {
+      title: `Save The Queen Candle Co. | About Us`,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Save The Queen Candles began when we poured our first candle into a vintage martini glass, using beeswax from our personal hives located in Northern Wisconsin.' },
+        { hid: 'keywords', name: 'keywords', content: 'wisconsin candles, save the queen candle co, candle, beeswax candle, vintage glassware, vintage, beeswax' },
+        { name: 'og:title', content: `Save The Queen Candle Co. | About Us` },
+        { name: 'og:description', content: 'Save The Queen Candles began when we poured our first candle into a vintage martini glass, using beeswax from our personal hives located in Northern Wisconsin.' },
+        { name: 'og:url', content: `https://savethequeencandleco.com/about-us` },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:image', content: `http://images.unsplash.com/photo-1473973266408-ed4e27abdd47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80` },
+        { name: 'og:image:secure_url', content: `https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80` },
+      ]
     }
+  },
 }
 </script>
 
