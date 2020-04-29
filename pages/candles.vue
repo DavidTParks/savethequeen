@@ -245,6 +245,14 @@ $vue-content-placeholders-spacing: 10px !default;
 	background: #ccc;
 }
 
+
+.vue-content-placeholders-heading__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .vue-content-placeholders-is-animated .vue-content-placeholders-heading__title::before {
 	content: "";
 	position: absolute;
