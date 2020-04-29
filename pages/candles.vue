@@ -321,6 +321,40 @@ $vue-content-placeholders-spacing: 10px !default;
 	}
 }
 
+.vue-content-placeholders-text__line {
+    position: relative;
+    overflow: hidden;
+    height: 15px;
+    background: #eee;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.vue-content-placeholders-text__line:nth-child(4n + 2) {
+    width: 100%;
+}
+
+.vue-content-placeholders-is-animated .vue-content-placeholders-text__line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 1000px;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, #e1e1e1 15%, transparent 30%);
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: vueContentPlaceholdersAnimation;
+    animation-name: vueContentPlaceholdersAnimation;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
 .vue-content-placeholders-img {
 	@include vue-content-placeholders;
 	@include vue-content-placeholders-spacing;

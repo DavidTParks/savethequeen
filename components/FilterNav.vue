@@ -1,5 +1,8 @@
 <template>
 <nav class="px-6 pt-6 text-base lg:text-sm lg:pl-6 lg:pr-8 sticky?lg:h-(screen-16)">
+            <content-placeholders>
+            <content-placeholders-text :lines="3" />
+        </content-placeholders>
     <template v-if="$fetchState.pending">
         <h5 class="mb-3 lg:mb-2 text-gray-500 uppercase tracking-wide font-bold text-base lg:text-xs">Collections</h5>
         <content-placeholders>
