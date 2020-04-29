@@ -2,10 +2,9 @@
     <div>
         <template v-if="$fetchState.pending">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 pt-6">
-                <content-placeholders v-for="n in 3"  :rounded="true" :key="n">
+                <content-placeholders v-for="n in 9"  :rounded="true" :key="n">
                     <content-placeholders-img />
                     <content-placeholders-heading />
-                    <content-placeholders-text :lines="3" />
                 </content-placeholders>
             </div>
         </template>
