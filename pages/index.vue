@@ -8,32 +8,31 @@
       >Featured Products</h2>
       <template v-if="$fetchState.pending">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
-          <content-placeholders  :rounded="true">
+          <content-placeholders :rounded="true">
             <content-placeholders-img />
             <content-placeholders-heading />
           </content-placeholders>
-          <content-placeholders  :rounded="true">
+          <content-placeholders :rounded="true">
             <content-placeholders-img />
             <content-placeholders-heading />
           </content-placeholders>
-          <content-placeholders  :rounded="true">
+          <content-placeholders :rounded="true">
             <content-placeholders-img />
             <content-placeholders-heading />
           </content-placeholders>
         </div>
       </template>
       <template v-else-if="$fetchState.error">
-        <p>
-          Error while fetching posts: {{ error }}
-        </p>
+        <p>Error while fetching posts: {{ error }}</p>
       </template>
-        <template v-else>s
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-            <template v-for="collection in collections">
-              <FeaturedProductCard :key="collection.id" :collection="collection"></FeaturedProductCard>
-            </template>
-          </div>
-        </template>
+      <template v-else>
+        s
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+          <template v-for="collection in collections">
+            <FeaturedProductCard :key="collection.id" :collection="collection"></FeaturedProductCard>
+          </template>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -53,25 +52,48 @@ export default {
   data() {
     return {
       products: [],
-      collections: [],
-    }
+      collections: []
+    };
   },
-  head () {
+  head() {
     return {
       title: `Save The Queen Candle Co. | Collectible Vintage Candles`,
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.' },
-        { hid: 'keywords', name: 'keywords', content: 'wisconsin candles, candle, beeswax candle, vintage glassware, vintage, beeswax' },
-        { name: 'og:title', content: `Save The Queen Candle Co. | Collectible Vintage Candles` },
-        { name: 'og:description', content: 'Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils.' },
-        { name: 'og:url', content: `https://www.savethequeencandleco.com/` },
-        { name: 'og:type', content: 'website' },
-        { name: 'og:image', content: `http://savethequeencandleco.imgix.net/homepage.jpg` },
-        { name: 'og:image:secure_url', content: `https://savethequeencandleco.imgix.net/homepage.jpg` },
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils."
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content:
+            "wisconsin candles, candle, beeswax candle, vintage glassware, vintage, beeswax"
+        },
+        {
+          name: "og:title",
+          content: `Save The Queen Candle Co. | Collectible Vintage Candles`
+        },
+        {
+          name: "og:description",
+          content:
+            "Our long-lasting candles are custom poured into collectible vintage glassware. We use a blend of natural Wisconsin beeswax, organic coconut oil, natural wicks and essential oils."
+        },
+        { name: "og:url", content: `https://www.savethequeencandleco.com/` },
+        { name: "og:type", content: "website" },
+        {
+          name: "og:image",
+          content: `http://savethequeencandleco.imgix.net/homepage.jpg`
+        },
+        {
+          name: "og:image:secure_url",
+          content: `https://savethequeencandleco.imgix.net/homepage.jpg`
+        }
       ]
-    }
+    };
   },
   async fetch() {
     this.collections = await this.$shopify.collection.fetchAllWithProducts();
@@ -79,7 +101,7 @@ export default {
   computed: {
     checkout() {
       return this.$store.state.candles.checkout;
-    },
+    }
   }
 };
 </script>

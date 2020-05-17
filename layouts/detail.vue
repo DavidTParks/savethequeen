@@ -1,19 +1,19 @@
 <template>
   <div>
-    <NavBar/>
+    <NavBar />
     <nuxt keep-alive />
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '~/components/NavBar.vue';
-import Footer from '~/components/Footer.vue';
+import NavBar from "~/components/NavBar.vue";
+import Footer from "~/components/Footer.vue";
 export default {
   components: {
     NavBar,
     Footer
-  },
-}
+  }
+};
 </script>
 
