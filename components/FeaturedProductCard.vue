@@ -7,7 +7,7 @@
         </template> -->
         <template>
             <nuxt-link :to="`/candles?collection=${collection.id}`">
-                <img class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="$shopify.image.helpers.imageForSize(collection.image, {maxWidth: 600, maxHeight: 600})"  :alt="collection.image.altText">
+                <img loading="lazy" class="object-cover h-96 sm:h-64 w-full overflow-hidden rounded-lg overflow-hidden shadow-lg" :src="$shopify.image.helpers.imageForSize(collection.image, {maxWidth: 600, maxHeight: 600})"  :alt="collection.image.altText">
             </nuxt-link>
         </template>
         <div class="p-4 text-center">

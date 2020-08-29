@@ -3,6 +3,7 @@
     <nuxt-link class="cursor-pointer" :to="`/candle/${product.id}`">
       <!-- <img class="object-cover h-96 sm:h-72 w-full overflow-hidden rounded-lg shadow-lg" :src="product.images[0].src" :alt="product.images[0].altText"> -->
       <img
+        loading="lazy"
         class="object-cover h-96 sm:h-72 w-full overflow-hidden"
         :src="$shopify.image.helpers.imageForSize(product.variants[0].image, {maxWidth: 500, maxHeight: 500})"
         :alt="product.images[0].altText"
