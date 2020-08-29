@@ -3,7 +3,12 @@ const fetch = require("node-fetch");
 const shopify = require("shopify-buy");
 // import "isomorphic-fetch"
 export default {
-  mode: "universal",
+  mode: 'universal',
+  /*
+  ** Nuxt target
+  ** See https://nuxtjs.org/api/configuration-target
+  */
+  target: 'static',
   /*
    ** Headers of the page
    */
