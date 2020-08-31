@@ -6,33 +6,11 @@
       <h2
         class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 mt-12 lg:text-center"
       >Featured Products</h2>
-      <template v-if="$fetchState.pending">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
-          <content-placeholders :rounded="true">
-            <content-placeholders-img />
-            <content-placeholders-heading />
-          </content-placeholders>
-          <content-placeholders :rounded="true">
-            <content-placeholders-img />
-            <content-placeholders-heading />
-          </content-placeholders>
-          <content-placeholders :rounded="true">
-            <content-placeholders-img />
-            <content-placeholders-heading />
-          </content-placeholders>
-        </div>
-      </template>
-      <template v-else-if="$fetchState.error">
-        <p>Error while fetching posts: {{ error }}</p>
-      </template>
-      <template v-else>
-        s
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-          <template v-for="collection in collections">
-            <FeaturedProductCard :key="collection.id" :collection="collection"></FeaturedProductCard>
-          </template>
-        </div>
-      </template>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+        <template v-for="collection in collections">
+          <FeaturedProductCard :key="collection.id" :collection="collection"></FeaturedProductCard>
+        </template>
+      </div>
     </div>
   </div>
 </template>
