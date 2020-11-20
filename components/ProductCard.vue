@@ -5,7 +5,12 @@
       <img
         loading="lazy"
         class="object-cover h-96 sm:h-72 w-full overflow-hidden"
-        :src="$shopify.image.helpers.imageForSize(product.variants[0].image, {maxWidth: 500, maxHeight: 500})"
+        :src="
+          $shopify.image.helpers.imageForSize(product.variants[0].image, {
+            maxWidth: 500,
+            maxHeight: 500
+          })
+        "
         :alt="product.images[0].altText"
       />
     </nuxt-link>
@@ -13,11 +18,13 @@
       <span
         class="flex items-center absolute top-0 left-0 rounded-full py-2 px-4 bg-gray-900 text-white m-2 shadow text-base"
       >
-        <p class>${{product.variants[0].price}}</p>
+        <p class>${{ product.variants[0].price }}</p>
       </span>
       <h3
         class="mt-2 text-center text-xl leading-9 font-semibold font-display text-gray-900 truncate"
-      >{{product.title}}</h3>
+      >
+        {{ product.title }}
+      </h3>
       <!-- <span
         class="px-3 flex items-center justify-center text-xl leading-none tracking-tight font-medium text-gray-900 sm:text-xl"
       >
@@ -33,7 +40,10 @@
       >
         Add To Cart
         <template
-          v-if="cartItemsLoading.length > 0 && cartItemsLoading.indexOf(product.variants[0].id) !== -1"
+          v-if="
+            cartItemsLoading.length > 0 &&
+              cartItemsLoading.indexOf(product.variants[0].id) !== -1
+          "
         >
           <svg
             class="h-3 w-3 rotate ml-2"
@@ -59,7 +69,10 @@
       >
         Remove From Cart
         <template
-          v-if="cartItemsLoading.length > 0 && cartItemsLoading.indexOf(product.variants[0].id) !== -1"
+          v-if="
+            cartItemsLoading.length > 0 &&
+              cartItemsLoading.indexOf(product.variants[0].id) !== -1
+          "
         >
           <svg
             class="h-3 w-3 rotate ml-2"
