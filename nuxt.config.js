@@ -39,7 +39,7 @@ export default {
       { name: "og:type", content: "website" },
       {
         name: "og:image",
-        content: `http://savethequeencandleco.imgix.net/homepage.jpg`
+        content: `https://savethequeencandleco.imgix.net/homepage.jpg`
       },
       {
         name: "og:image:secure_url",
