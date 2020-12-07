@@ -1,5 +1,19 @@
 <template>
   <div class="min-h-screen pb-24">
+  <div class="w-full bg-red-600">
+    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="pr-16 sm:text-center sm:px-16">
+        <p class="font-medium text-white">
+          <span class="md:hidden">
+            Sitewide sale!
+          </span>
+          <span class="md:inline">
+            Use code SALE25 at checkout for 25% off
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
     <Hero></Hero>
     <div class="container max-w-5xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
       <MarketingSection />
