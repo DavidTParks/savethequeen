@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SaleBanner/>
     <NavBar />
     <nuxt keep-alive />
     <Footer />
