@@ -1,19 +1,5 @@
 <template>
   <nav class="z-10 border-b-2 border-gray-200 bg-white fixed w-full">
-    <div class="w-full bg-red-600">
-    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-      <div class="pr-16 sm:text-center sm:px-16">
-        <p class="font-medium text-white">
-          <span class="md:hidden">
-            Sitewide sale!
-          </span>
-          <span class="md:inline">
-            Use code SALE25 at checkout for 25% off
-          </span>
-        </p>
-      </div>
-    </div>
-  </div>
     <div class="max-w-screen-xl mx-auto flex items-center justify-between max-w-screen-xl mx-auto">
       <div class="relative flex items-center py-6 px-4 sm:px-6 lg:px-8">
         <nuxt-link to="/" class="flex items-center sm:h-10">
