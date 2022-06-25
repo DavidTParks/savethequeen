@@ -17,7 +17,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/toast": "^3.3.1",
     "isomorphic-fetch": "^2.2.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "nuxt": "^2.14.7",
     "nuxt-lazy-load": "^1.2.4",
     "nuxt-shopify": "^1.10.4",
